@@ -1,0 +1,22 @@
+.body {
+     width: 95%;
+    height: 76%;
+    background-color: #0ddfd9;
+    opacity: 8%;
+    border: 1px solid black;
+    position: fixed;
+    top: 15%;
+    left: 2%;
+
+   }
+.background{
+  /* min-width:1140px; */
+  background-color: #addde7;
+   padding: 0;
+  /* opacity: 20%; */
+  filter: blur(1000px);
+  position: absolute;
+  width: 100% !important;
+  height: 70%;
+  clip-path: polygon(50% 0%, 100% 0, 100% 43%, 82% 76%, 49% 36%, 26% 72%, 15% 37%, 0 18%, 0 0);
+}

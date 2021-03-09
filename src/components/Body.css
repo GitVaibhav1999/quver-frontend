@@ -7,13 +7,15 @@
     position: fixed;
     top: 15%;
     left: 2%;
+    box-shadow: 10px 10px 10px 10px;
 
    }
 .background{
   /* min-width:1140px; */
+
   background-color: #addde7;
    padding: 0;
-  /* opacity: 20%; */
+  opacity: 50%;
   filter: blur(1000px);
   position: absolute;
   width: 100% !important;

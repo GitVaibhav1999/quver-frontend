@@ -6,9 +6,9 @@
 }
 
 .steps_container{
-  width: 200px;
+  width: 15%;
   position: fixed;
-  left: 41%;
+  left: 40%;
 }
 .each_step{
 
@@ -40,4 +40,12 @@
   position:fixed;
    right:10px;
 
+}
+.arrow_img{
+  padding-left: 10%;
+  width: 14px;
+  height: 14px;
+}
+.arrow_img{
+  padding-left: 10% im !important;
 }

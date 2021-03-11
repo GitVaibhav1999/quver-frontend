@@ -58,6 +58,7 @@ export default function ChapterButton() {
         variant="contained"
         color="primary"
         onClick={handleClick}
+        disableElevation
       >
         Chapter
       </Button>

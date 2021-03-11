@@ -1,0 +1,47 @@
+.table_body{
+
+    padding-top: 4%;
+    color: black;
+    /* text-align: center; */
+    border-bottom: black;
+    /* background-color: white; */
+    height: 37.5vh;
+    overflow: auto;
+
+}
+.qq_div{
+    width: 100%;
+}
+.chapter_name{
+    margin-left: 40%;
+    color: grey;
+    font-weight: bold;
+}
+.subject_name{
+    margin-left: 2%;
+    margin-top: 0;
+    color:#3f658a;
+}
+.question_count_button{
+    display: flex;
+    width: 80%;
+    /* border: solid 1px; */
+    margin-bottom: 4%;
+    margin-left: 10%;
+    /* overflow:hidden; */
+}
+.difficulty_div1{
+    margin-left: 10%;
+    margin-right: 5%;
+    height: 100%;
+    background-color: #a1e6e9;
+}
+.difficulty_div2{
+    height: 100%;
+    margin-right: 5%;
+    margin-left: 10%;
+    background-color: #72e3dd;
+}
+.each_diffculty{
+    padding:10%
+}

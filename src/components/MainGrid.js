@@ -8,12 +8,13 @@ import SubjectButton from './SubjectButton'
 import ChapterButton from './ChapterButton'
 import PieChart from './PieChart'
 import Table from './Table'
+import RangeSlider from '../Slider';
 
 const MainGrid = () => {
 
     return (
-        <div className='main_div'>
-            <Grid className='main_grid' container spacing={2}>
+        <div className='main_grid'>
+            <Grid container spacing={2}>
                 <Grid item xs={8}>
 
                     <Grid container spacing={2}>
@@ -26,24 +27,27 @@ const MainGrid = () => {
                         <Grid>
                             <div></div>&nbsp;&nbsp;&nbsp;
                             </Grid>
-                        <Grid item xs={12}>
-                            <Table />
+                        <div className='table_parent'>
+                            <Grid item xs={12}>
+
+                                <Table />
+
+
+                            </Grid>
+                        </div>
+                        <Grid  item xs={12}>
+                            <Grid container>
+                                <h7>Toughness Selector</h7>
+                            <div className='slider'>
+                                <RangeSlider />
+                            </div>
+                            </Grid>
+                            
                         </Grid>
-                        <Grid item xs={12}>
-                            <div className = 'slider'>
-                                <Slider 
-                                // value = {43,32}
-                                
-                                valueLabelDisplay="auto"
-                                aria-labelledby="range-slider"
-                                // getAriaValueText={100}
-                              />
-                           </div>
-                        </Grid>
-                        <Grid item xs={12}>
-                            <Button className='submit_button' variant="contained">
+                        <Grid  item xs={12}>
+                            <Button className='submit_button' variant="contained" color="primary" disableElevation>
                                 Submit
-                                </Button>
+                            </Button>
                         </Grid>
                     </Grid>
 
@@ -54,7 +58,8 @@ const MainGrid = () => {
                 </Grid>
 
             </Grid>
-        </div>
+
+        </div >
     );
 
 }

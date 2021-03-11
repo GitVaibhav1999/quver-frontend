@@ -3,6 +3,7 @@
   height: 73px;
   color: white;
   background-color: #3f658a;
+  position: inherit;
 }
 
 .steps_container{

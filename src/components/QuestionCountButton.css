@@ -1,0 +1,22 @@
+
+.count_button_inc{
+    background-color: #5777b4 !important;
+    border-radius: 0 !important;
+    font-size: 10%;
+    
+
+}
+.count_button_dec{
+    display:inline-flexbox;
+    font-size: 1%;
+    height: 10% !;
+    background-color: #5294eb !important;
+    border-radius: 0 !important;
+}
+.count{
+    text-align: center;
+    background-color: white;
+    padding: 1vh;
+    overflow: hidden;
+    
+}

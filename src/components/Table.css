@@ -3,5 +3,29 @@
     width: 100%;
     opacity: 10%;
     background-color: #3f658a;
-    margin-top: 10% impor !important;
+    /* background-color: red; */
+    /* margin-top: 10% impor    !important; */
+}
+.prime{
+    background-color: red;
+    height: 10%;
+}
+.table_header{
+  
+    padding-top: 2%;
+    /* padding-bottom: 1%; */
+    text-align: center;
+    background-color: #65a5ef;
+    color: white;
+}
+
+
+
+.ontop{
+    
+    position: absolute;
+    top: 28.4%;
+    height: 2%;
+    
+    width: 63.25%;
 }

@@ -1,7 +1,21 @@
 .pie_chart_div{
-    height: 50vh;
+    height: 54vh;
     width: 50vh;
     opacity: 30%;
     margin-top: 4.5% !important;
     background-color: #3f658a;
+    margin-left: 4%;
 }
+.top{ 
+    position: relative;
+    bottom: 49vh;
+    opacity: 100%;
+    text-align: centre;
+    align-content: stretch;
+    color: #3f658a;
+    left: 100%;
+    /* background-color: red; */
+    width: 60%;
+    margin-left: 15%;
+    left: 7%;
+} 

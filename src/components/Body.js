@@ -10,8 +10,8 @@ import MainGrid from '../components/MainGrid'
 const Body = () => {
     return (
         <div>
-            <div className='background' >
-            </div>
+                <div className='background' >
+                </div>
             <Card className='body' >
             
             </Card>

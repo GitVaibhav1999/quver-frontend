@@ -9,6 +9,7 @@ import ChapterButton from './ChapterButton'
 import PieChart from './PieChart'
 import Table from './Table'
 import RangeSlider from '../Slider';
+import { DataProvider } from './DataContext';
 
 const MainGrid = () => {
 
@@ -19,10 +20,15 @@ const MainGrid = () => {
 
                     <Grid container spacing={2}>
                         <Grid item xs={4} >
-                            <SubjectButton />
+                           
+                                <SubjectButton />
+                            
+
                         </Grid>
                         <Grid item xs={8} >
-                            <ChapterButton />
+                        
+                                <ChapterButton />
+                            
                         </Grid >
                         <Grid>
                             <div></div>&nbsp;&nbsp;&nbsp;
@@ -35,16 +41,16 @@ const MainGrid = () => {
 
                             </Grid>
                         </div>
-                        <Grid  item xs={12}>
+                        <Grid item xs={12}>
                             <Grid container>
                                 <h7>Toughness Selector</h7>
-                            <div className='slider'>
-                                <RangeSlider />
-                            </div>
+                                <div className='slider'>
+                                    <RangeSlider />
+                                </div>
                             </Grid>
-                            
+
                         </Grid>
-                        <Grid  item xs={12}>
+                        <Grid item xs={12}>
                             <Button className='submit_button' variant="contained" color="primary" disableElevation>
                                 Submit
                             </Button>

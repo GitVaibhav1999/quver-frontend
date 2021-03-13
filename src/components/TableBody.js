@@ -12,7 +12,6 @@ const TableBody = () => {
             <Grid container>
                 <Grid item xs={12}>
 
-
                     <Grid container column spacing>
                         <div className='subject_name'>
                             Physics:

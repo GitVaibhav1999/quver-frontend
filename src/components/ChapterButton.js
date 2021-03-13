@@ -1,90 +1,46 @@
-import React from "react";
-import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
-import ListItemText from "@material-ui/core/ListItemText";
+import React, { useContext, useEffect } from 'react';
+import Select from 'react-select';
+import { DataContext } from './DataContext';
 
-import './ChapterButton.css'
 
-const StyledMenu = withStyles({
-  paper: {
-    border: "1px solid #d3d4d5"
-  }
-})((props) => (
-  <Menu
-    elevation={0}
-    getContentAnchorEl={null}
-    anchorOrigin={{
-      vertical: "bottom",
-      horizontal: "center"
-    }}
-    transformOrigin={{
-      vertical: "top",
-      horizontal: "center"
-    }}
-    {...props}
-  />
-));
 
-const StyledMenuItem = withStyles((theme) => ({
-  root: {
-    "&:focus": {
-      backgroundColor: theme.palette.primary.main,
-      "& .MuiListItemIcon-root, & .MuiListItemText-primary": {
-        color: theme.palette.common.white
+const Selector = () => {
+
+  const { value1, value2, value_chapter } = useContext(DataContext)
+
+  const [data, setData] = value1;
+  const [subjectSelected, setSubjectSelected] = value2;
+  const [chaptersSelected, SetChapterSelected] = value_chapter
+
+  var options = [];
+
+  useEffect(function () {
+
+
+    data.map(function (element) {
+      if (element.SubjectName == subjectSelected) {
+        options.push({ 'label': element.ChapterName, 'value':element.ChapterName })
       }
-    }
+    })
+
+  }, [subjectSelected]);
+
+
+  const AddChapter = (event) => {
+    console.log(event)
   }
-}))(MenuItem);
 
-export default function ChapterButton() {
-  const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+return (
+  <Select
+    // onChange={AddChapter}
+    options={options}
 
-  return (
-    <div className>
-      <Button
-        className='chap_button'
-        aria-controls="customized-menu"
-        aria-haspopup="true"
-        variant="contained"
-        color="primary"
-        onClick={handleClick}
-        disableElevation
-      >
-        Chapter
-      </Button>
-      <StyledMenu
-        id="customized-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <StyledMenuItem>
-          <ListItemText primary="Chapter 1" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Chapter 2" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Chapter 3" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Chapter 4" />
-        </StyledMenuItem>
-        <StyledMenuItem>
-          <ListItemText primary="Chapter 5" />
-        </StyledMenuItem>
-      </StyledMenu>
-    </div>
-  );
+    isMulti
+
+  />
+)
 }
+
+export default Selector;
